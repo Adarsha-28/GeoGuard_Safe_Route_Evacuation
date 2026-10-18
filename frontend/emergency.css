@@ -1,0 +1,273 @@
+@import url('style.css');
+
+.main-container {
+    max-width: 1600px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* SOS Button Card */
+.sos-container {
+    max-width: 1600px;
+    width: calc(100% - 48px);
+    margin: 20px auto 0 auto;
+    padding: 30px 24px;
+    position: relative;
+    background-color: #FEF2F2;
+    border: 1px solid #FCA5A5;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.04);
+}
+
+.sos-button {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #DC2626;
+    border: 4px solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+    transition: all 0.2s ease;
+}
+
+.sos-button:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+}
+
+.sos-button:active {
+    transform: scale(0.98);
+}
+
+.sos-pulse {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    border: 4px solid #DC2626;
+    animation: pulse 2s infinite;
+    opacity: 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.sos-info {
+    margin-top: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #DC2626;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.section h2 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #0B5E8E;
+    border-bottom: 2px solid #D9E2EA;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+/* Contacts Grid */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.contact-card {
+    background-color: #FFFFFF;
+    border: 1px solid #D9E2EA;
+    border-radius: 6px;
+    padding: 16px 20px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(15, 45, 65, 0.05);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 4px 16px;
+}
+
+.contact-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 45, 65, 0.08);
+    border-color: #0F7DB5;
+}
+
+.contact-card.emergency {
+    border-left: 4px solid #DC2626;
+}
+
+.contact-card h3 {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: #17324D;
+}
+
+.contact-number {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 800;
+    color: #0B5E8E;
+    text-decoration: none;
+    padding: 6px 14px;
+    background-color: #EAF4F9;
+    border-radius: 4px;
+    border: 1px solid #D9E2EA;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.contact-number:hover {
+    background-color: #0B5E8E;
+    color: #FFFFFF;
+}
+
+.contact-card.emergency .contact-number {
+    color: #DC2626;
+    background-color: #FEF2F2;
+    border-color: #FCA5A5;
+}
+
+.contact-card.emergency .contact-number:hover {
+    background-color: #DC2626;
+    color: #FFFFFF;
+}
+
+.contact-desc {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 12px;
+    color: #64748B;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(23, 50, 77, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background-color: #FFFFFF;
+    margin: 12% auto;
+    padding: 30px;
+    border: 1px solid #D9E2EA;
+    border-radius: 6px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(15, 45, 65, 0.15);
+    animation: slideIn 0.2s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #64748B;
+    float: right;
+    font-size: 28px;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.close:hover {
+    color: #DC2626;
+}
+
+.modal-content h2 {
+    color: #DC2626;
+    margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.modal-content p {
+    color: #17324D;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.emergency-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #FEF2F2;
+    border: 1px solid #FCA5A5;
+    border-radius: 4px;
+    color: #DC2626;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    background-color: #DC2626;
+    color: #FFFFFF;
+}
+
+.location-info {
+    background-color: #F4F7F9;
+    border: 1px solid #D9E2EA;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #64748B;
+    text-align: center;
+}

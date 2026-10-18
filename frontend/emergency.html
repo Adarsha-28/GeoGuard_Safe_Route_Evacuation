@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGuard - Emergency Contacts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="emergency.css">
+</head>
+<body>
+    <!-- Government Emergency Header -->
+    <header class="header">
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><path d="M20 13c0 5-3.5 7.5-7.66 9.7a1 1 0 0 1-.68 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 .76-.97l8-2a1 1 0 0 1 .48 0l8 2A1 1 0 0 1 20 6z"/></svg>
+            <span>GEOGUARD</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="10" rx="1"/><rect width="7" height="5" x="3" y="15" rx="1"/></svg>
+                Dashboard
+            </a>
+            <a href="areas.html" class="nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Risk Areas
+            </a>
+            <a href="about.html" class="nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                About
+            </a>
+            <a href="emergency.html" class="emergency-link active">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Emergency
+            </a>
+            <a href="login.html" class="admin-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Admin
+            </a>
+        </nav>
+    </header>
+
+    <!-- SOS Button -->
+    <div class="sos-container">
+        <button class="sos-button" id="sosButton">
+            <div class="sos-pulse"></div>
+            <span class="sos-text">SOS</span>
+        </button>
+        <p class="sos-info">Press for Emergency Alert Trigger</p>
+    </div>
+
+    <div class="main-container">
+        <!-- Emergency Services -->
+        <div class="section">
+            <h2>Primary Emergency Services</h2>
+            <div class="contacts-grid">
+                <div class="contact-card emergency">
+                    <h3>Emergency Ambulance</h3>
+                    <a href="tel:108" class="contact-number">108</a>
+                    <p class="contact-desc">24/7 Emergency Medical Services</p>
+                </div>
+                <div class="contact-card emergency">
+                    <h3>Fire & Rescue Services</h3>
+                    <a href="tel:101" class="contact-number">101</a>
+                    <p class="contact-desc">Fire Emergency & Rescue Operations</p>
+                </div>
+                <div class="contact-card emergency">
+                    <h3>Police Control Room</h3>
+                    <a href="tel:100" class="contact-number">100</a>
+                    <p class="contact-desc">Police Emergency Dispatch Center</p>
+                </div>
+                <div class="contact-card emergency">
+                    <h3>State Emergency Operations</h3>
+                    <a href="tel:1070" class="contact-number">1070</a>
+                    <p class="contact-desc">State Disaster Management Command</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chennai Corporation -->
+        <div class="section">
+            <h2>Greater Chennai Corporation Helplines</h2>
+            <div class="contacts-grid">
+                <div class="contact-card">
+                    <h3>GCC Control Room</h3>
+                    <a href="tel:04425619206" class="contact-number">044-2561 9206</a>
+                    <p class="contact-desc">24x7 Central Disaster Hotline</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Water Supply (Metro Water)</h3>
+                    <a href="tel:04425384520" class="contact-number">044-2538 4520</a>
+                    <p class="contact-desc">Water Infrastructure Services</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Electricity Services (TANGEDCO)</h3>
+                    <a href="tel:04425412345" class="contact-number">044-2541 2345</a>
+                    <p class="contact-desc">Power Grid & Line Enquiries</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Storm Water Drainage</h3>
+                    <a href="tel:1913" class="contact-number">1913</a>
+                    <p class="contact-desc">Drainage Block & Overflow Complaints</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disaster Management -->
+        <div class="section">
+            <h2>State Disaster Management Helplines</h2>
+            <div class="contacts-grid">
+                <div class="contact-card">
+                    <h3>TNSDMA Control Room</h3>
+                    <a href="tel:04428524877" class="contact-number">044-2852 4877</a>
+                    <p class="contact-desc">State Disaster Management Authority</p>
+                </div>
+                <div class="contact-card">
+                    <h3>NDRF Command Helpline</h3>
+                    <a href="tel:9711077372" class="contact-number">9711-077-372</a>
+                    <p class="contact-desc">National Disaster Response Force</p>
+                </div>
+                <div class="contact-card">
+                    <h3>District Flood Control</h3>
+                    <a href="tel:04425619206" class="contact-number">044-2561 9206</a>
+                    <p class="contact-desc">Chennai District Management Room</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Indian Coast Guard</h3>
+                    <a href="tel:04425461405" class="contact-number">044-2546 1405</a>
+                    <p class="contact-desc">Maritime Rescue Coordination Center</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medical Services -->
+        <div class="section">
+            <h2>Government & Major Hospitals</h2>
+            <div class="contacts-grid">
+                <div class="contact-card">
+                    <h3>Rajiv Gandhi General Hospital</h3>
+                    <a href="tel:04425951201" class="contact-number">044-2595 1201</a>
+                    <p class="contact-desc">Emergency Desk: 044-2595 1200</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Stanley Medical College</h3>
+                    <a href="tel:04425281351" class="contact-number">044-2528 1351</a>
+                    <p class="contact-desc">Emergency Operations & Trauma Center</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Apollo Emergency Desk</h3>
+                    <a href="tel:04428293333" class="contact-number">044-2829 3333</a>
+                    <p class="contact-desc">24/7 Private Emergency Care</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Fortis Malar Hospital</h3>
+                    <a href="tel:04442892222" class="contact-number">044-4289 2222</a>
+                    <p class="contact-desc">Emergency Care Services</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transport & Railways -->
+        <div class="section">
+            <h2>Critical Infrastructure & Transport</h2>
+            <div class="contacts-grid">
+                <div class="contact-card">
+                    <h3>Southern Railway Helpline</h3>
+                    <a href="tel:139" class="contact-number">139</a>
+                    <p class="contact-desc">National Rail Network Enquiries</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Chennai Airport Control</h3>
+                    <a href="tel:04422560551" class="contact-number">044-2256 0551</a>
+                    <p class="contact-desc">Airport Command & flight status</p>
+                </div>
+                <div class="contact-card">
+                    <h3>MTC Metropolitan Transport</h3>
+                    <a href="tel:04425617624" class="contact-number">044-2561 7624</a>
+                    <p class="contact-desc">Government Bus Transport Dispatch</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Chennai Metro Rail Center</h3>
+                    <a href="tel:04428524910" class="contact-number">044-2852 4910</a>
+                    <p class="contact-desc">Metro Operations Center</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Relief & Welfare -->
+        <div class="section">
+            <h2>Emergency Relief & Welfare</h2>
+            <div class="contacts-grid">
+                <div class="contact-card">
+                    <h3>Relief Commissioner Office</h3>
+                    <a href="tel:04425619206" class="contact-number">044-2561 9206</a>
+                    <p class="contact-desc">Disaster Relief Operations Desk</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Emergency Food Supply</h3>
+                    <a href="tel:04425619206" class="contact-number">044-2561 9206</a>
+                    <p class="contact-desc">Food Dispatch & Distribution Helpline</p>
+                </div>
+                <div class="contact-card">
+                    <h3>National Child Helpline</h3>
+                    <a href="tel:1098" class="contact-number">1098</a>
+                    <p class="contact-desc">Child Emergency & Rescue Services</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Senior Citizens Command</h3>
+                    <a href="tel:14567" class="contact-number">14567</a>
+                    <p class="contact-desc">Elderly Care Emergency Services</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weather & Information -->
+        <div class="section">
+            <h2>Precipitation & Weather Broadcasts</h2>
+            <div class="contacts-grid">
+                <div class="contact-card">
+                    <h3>IMD Chennai Meteorological Center</h3>
+                    <a href="tel:04425361919" class="contact-number">044-2536 1919</a>
+                    <p class="contact-desc">India Meteorological Department Station</p>
+                </div>
+                <div class="contact-card">
+                    <h3>All India Radio Station</h3>
+                    <a href="tel:04428544000" class="contact-number">044-2854 4000</a>
+                    <p class="contact-desc">Official Emergency Radio Broadcasts</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Doordarshan TV Station</h3>
+                    <a href="tel:04424343353" class="contact-number">044-2434 3353</a>
+                    <p class="contact-desc">Official TV Emergency Broadcast Center</p>
+                </div>
+                <div class="contact-card">
+                    <h3>National Citizen Call Center</h3>
+                    <a href="tel:1913" class="contact-number">1913</a>
+                    <p class="contact-desc">Citizen Information & Services</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOS Modal -->
+    <div id="sosModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>SOS Alert Activated</h2>
+            <p>Your coordinates have been parsed. Emergency dispatch notified.</p>
+            <div class="emergency-actions">
+                <a href="tel:108" class="action-btn">Call Medical Dispatch (108)</a>
+                <a href="tel:100" class="action-btn">Call Police Dispatch (100)</a>
+                <a href="tel:101" class="action-btn">Call Fire Dispatch (101)</a>
+                <a href="tel:1070" class="action-btn">Call Disaster Control (1070)</a>
+            </div>
+            <div class="location-info" id="locationInfo">
+                <p>Retrieving GPS coordinates...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Government Portal Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>GEOGUARD</h4>
+                <p>Chennai Flood Risk Monitoring & Disaster Evacuation Portal</p>
+                <p>&copy; 2026 GeoGuard. Disaster Management Authority Dashboard.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Dashboard</a>
+                <a href="areas.html">Area List</a>
+                <a href="about.html">About Portal</a>
+                <a href="emergency.html">Emergency Numbers</a>
+                <a href="login.html">Admin Portal</a>
+            </div>
+            <div class="footer-section">
+                <h4>Emergency Links</h4>
+                <p>Ambulance Service: 108</p>
+                <p>Fire Command Center: 101</p>
+                <p>Police Response: 100</p>
+            </div>
+            <div class="footer-section">
+                <h4>Official Contact</h4>
+                <p>Email: controlroom@geoguard.gov.in</p>
+                <p>Hotline: 044-2561-9206</p>
+                <p>Address: EOC Building, Chennai, Tamil Nadu</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="emergency.js"></script>
+</body>
+</html>

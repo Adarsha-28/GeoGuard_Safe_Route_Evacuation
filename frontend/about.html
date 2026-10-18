@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - GeoGuard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            height: auto;
+            overflow-y: auto;
+            min-height: 100vh;
+        }
+        
+        .about-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .about-hero {
+            background-color: #FFFFFF;
+            padding: 3rem;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(15, 45, 65, 0.05);
+            border: 1px solid #D9E2EA;
+        }
+        
+        .about-hero h1 {
+            color: #0B5E8E;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .about-hero p {
+            color: #17324D;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background-color: #FFFFFF;
+            padding: 2rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(15, 45, 65, 0.05);
+            border: 1px solid #D9E2EA;
+            transition: all 0.2s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(15, 45, 65, 0.08);
+        }
+        
+        .feature-icon-wrapper {
+            margin-bottom: 12px;
+            color: #0F7DB5;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .feature-card h3 {
+            color: #0B5E8E;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        
+        .feature-card p {
+            color: #64748B;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        .tech-stack {
+            background-color: #FFFFFF;
+            padding: 2rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(15, 45, 65, 0.05);
+            border: 1px solid #D9E2EA;
+        }
+        
+        .tech-stack h2 {
+            color: #0B5E8E;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+        }
+        
+        .tech-item {
+            background-color: #EAF4F9;
+            color: #0B5E8E;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 13px;
+            border: 1px solid #D9E2EA;
+        }
+    </style>
+</head>
+<body>
+    <!-- Government Emergency Header -->
+    <header class="header">
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><path d="M20 13c0 5-3.5 7.5-7.66 9.7a1 1 0 0 1-.68 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 .76-.97l8-2a1 1 0 0 1 .48 0l8 2A1 1 0 0 1 20 6z"/></svg>
+            <span>GEOGUARD</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="10" rx="1"/><rect width="7" height="5" x="3" y="15" rx="1"/></svg>
+                Dashboard
+            </a>
+            <a href="areas.html" class="nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Risk Areas
+            </a>
+            <a href="about.html" class="nav-link active">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                About
+            </a>
+            <a href="emergency.html" class="emergency-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Emergency
+            </a>
+            <a href="login.html" class="admin-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Admin
+            </a>
+        </nav>
+    </header>
+
+    <div class="about-container">
+        <div class="about-hero">
+            <h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #0B5E8E;"><path d="M20 13c0 5-3.5 7.5-7.66 9.7a1 1 0 0 1-.68 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 .76-.97l8-2a1 1 0 0 1 .48 0l8 2A1 1 0 0 1 20 6z"/></svg>
+                About GeoGuard
+            </h1>
+            <p>GeoGuard is a government-grade geospatial flood monitoring and evacuation prediction system designed specifically for the Chennai metropolitan area. Using predictive models and real-time data analysis, we assist municipal authorities and emergency response teams in identifying vulnerable regions and coordinating resources.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="12 8 8 12 12 16 16 12 12 8"/></svg>
+                </div>
+                <h3>Real-Time Monitoring</h3>
+                <p>Interactive maps displaying dynamic flood risk data across tracked Chennai zones with color-coded alerts and live updates.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                </div>
+                <h3>Risk Assessment</h3>
+                <p>Sophisticated analytical models that compute risk indices using elevation variables, live rainfall telemetry, and water body proximity factors.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <h3>Shelter Locator</h3>
+                <p>Live shelter matching services detailing exact distance, maximum capacities, active facilities, and primary contact lines.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </div>
+                <h3>Emergency Alerts</h3>
+                <p>Instant visual warning system to help municipal authorities initiate evacuations in high and critical status sectors.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <h3>Emergency Contacts</h3>
+                <p>Quick operational directories linking users with essential municipal, fire, medical, and disaster services.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <h3>Geospatial Analytics</h3>
+                <p>GPS tracking systems providing immediate distance vectors and routing paths to safe areas based on user location.</p>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h2>🔧 Operational Infrastructure</h2>
+            <div class="tech-list">
+                <span class="tech-item">HTML5 Semantic markup</span>
+                <span class="tech-item">CSS Grid / CSS Flexbox</span>
+                <span class="tech-item">Vanilla JavaScript</span>
+                <span class="tech-item">Leaflet.js Engine</span>
+                <span class="tech-item">GeoJSON Datasets</span>
+                <span class="tech-item">Python Server Core</span>
+                <span class="tech-item">OpenStreetMap API</span>
+                <span class="tech-item">SRTM Digital Elevation Model</span>
+                <span class="tech-item">IMD Precipitation Metrics</span>
+            </div>
+        </div>
+
+        <div class="about-hero">
+            <h2 style="color: #0B5E8E; margin-bottom: 1rem; font-weight: 700;">🎯 Mission Objectives</h2>
+            <p>To deliver high-availability, accurate, and structured flood intelligence that empowers municipal disaster management operators to safeguard lives, direct relief resources, and coordinate critical infrastructure responses during extreme weather events.</p>
+        </div>
+    </div>
+
+    <!-- Government Portal Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>GEOGUARD</h4>
+                <p>Chennai Flood Risk Monitoring & Disaster Evacuation Portal</p>
+                <p>&copy; 2026 GeoGuard. Disaster Management Authority Dashboard.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Dashboard</a>
+                <a href="areas.html">Area List</a>
+                <a href="about.html">About Portal</a>
+                <a href="emergency.html">Emergency Numbers</a>
+                <a href="login.html">Admin Portal</a>
+            </div>
+            <div class="footer-section">
+                <h4>Emergency Links</h4>
+                <p>Ambulance Service: 108</p>
+                <p>Fire Command Center: 101</p>
+                <p>Police Response: 100</p>
+            </div>
+            <div class="footer-section">
+                <h4>Official Contact</h4>
+                <p>Email: controlroom@geoguard.gov.in</p>
+                <p>Hotline: 044-2561-9206</p>
+                <p>Address: EOC Building, Chennai, Tamil Nadu</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

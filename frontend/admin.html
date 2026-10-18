@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGuard - Admin Dashboard</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <script>
+        // Check if user is logged in
+        if (sessionStorage.getItem('adminLoggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+    
+    <header class="header">
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><path d="M20 13c0 5-3.5 7.5-7.66 9.7a1 1 0 0 1-.68 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 .76-.97l8-2a1 1 0 0 1 .48 0l8 2A1 1 0 0 1 20 6z"/></svg>
+            <span>GEOGUARD ADMIN</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="10" rx="1"/><rect width="7" height="5" x="3" y="15" rx="1"/></svg>
+                Dashboard
+            </a>
+            <a href="emergency.html" class="nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Emergency
+            </a>
+            <a href="admin.html" class="nav-link active">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Admin
+            </a>
+        </nav>
+        <div class="admin-info" style="display: flex; align-items: center; gap: 12px;">
+            <span class="admin-name" style="font-size: 13px; font-weight: 600; color: #EAF4F9;">Admin Operator</span>
+            <button class="btn btn-danger btn-sm" onclick="logout()" style="width: auto; height: 32px; padding: 0 12px;">Logout</button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar" style="background-color: #FFFFFF; border-right: 1px solid #D9E2EA;">
+            <div class="menu-section">
+                <h3>Analytics</h3>
+                <button class="menu-item active" onclick="showSection('overview')">
+                    Overview
+                </button>
+                <button class="menu-item" onclick="showSection('zones')">
+                    Zone Management
+                </button>
+                <button class="menu-item" onclick="showSection('alerts')">
+                    Alert System
+                </button>
+                <button class="menu-item" onclick="showSection('reports')">
+                    Reports
+                </button>
+            </div>
+            <div class="menu-section">
+                <h3>Settings</h3>
+                <button class="menu-item" onclick="showSection('users')">
+                    User Management
+                </button>
+                <button class="menu-item" onclick="showSection('contacts')">
+                    Emergency Contacts
+                </button>
+                <button class="menu-item" onclick="showSection('system')">
+                    System Settings
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Overview Section -->
+            <div id="overview" class="section active">
+                <h2>System Overview</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h3 id="totalZonesAdmin">0</h3>
+                            <p>Total Zones</p>
+                        </div>
+                    </div>
+                    <div class="stat-card alert">
+                        <div class="stat-info">
+                            <h3 id="highRiskAdmin">0</h3>
+                            <p>High Risk Zones</p>
+                        </div>
+                    </div>
+                    <div class="stat-card success">
+                        <div class="stat-info">
+                            <h3 id="safeZonesAdmin">0</h3>
+                            <p>Safe Zones</p>
+                        </div>
+                    </div>
+                    <div class="stat-card info">
+                        <div class="stat-info">
+                            <h3>1,247</h3>
+                            <p>Active Users</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-container">
+                    <div class="chart-card">
+                        <h3>Risk Distribution</h3>
+                        <canvas id="riskChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Weekly Trends</h3>
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h3>🕐 Recent Activity</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <span class="activity-time">2 min ago</span>
+                            <span class="activity-text">High risk alert triggered in T. Nagar</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-time">15 min ago</span>
+                            <span class="activity-text">System backup completed successfully</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-time">1 hour ago</span>
+                            <span class="activity-text">New user registered: user@example.com</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-time">2 hours ago</span>
+                            <span class="activity-text">Weather data updated</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zone Management Section -->
+            <div id="zones" class="section">
+                <h2>Zone Management</h2>
+                
+                <div class="controls">
+                    <input type="text" id="searchZone" placeholder="Search zones..." class="search-input">
+                    <select id="filterRisk" class="filter-select">
+                        <option value="all">All Risk Levels</option>
+                        <option value="Low">Low</option>
+                        <option value="Moderate">Moderate</option>
+                        <option value="High">High</option>
+                        <option value="Severe">Severe</option>
+                    </select>
+                    <button class="btn-primary" onclick="exportZones()">Export Data</button>
+                </div>
+
+                <div class="map-container-admin">
+                    <div id="adminMap"></div>
+                </div>
+
+                <div class="zone-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Zone ID</th>
+                                <th>Location</th>
+                                <th>Risk Level</th>
+                                <th>Population</th>
+                                <th>Last Updated</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="zoneTableBody">
+                            <tr>
+                                <td>#001</td>
+                                <td>T. Nagar</td>
+                                <td><span class="badge high">High</span></td>
+                                <td>45,000</td>
+                                <td>2 min ago</td>
+                                <td>
+                                    <button class="btn-small">Edit</button>
+                                    <button class="btn-small">Alert</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#002</td>
+                                <td>Anna Nagar</td>
+                                <td><span class="badge moderate">Moderate</span></td>
+                                <td>38,000</td>
+                                <td>5 min ago</td>
+                                <td>
+                                    <button class="btn-small">Edit</button>
+                                    <button class="btn-small">Alert</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#003</td>
+                                <td>Adyar</td>
+                                <td><span class="badge safe">Low</span></td>
+                                <td>52,000</td>
+                                <td>10 min ago</td>
+                                <td>
+                                    <button class="btn-small">Edit</button>
+                                    <button class="btn-small">Alert</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Alert System Section -->
+            <div id="alerts" class="section">
+                <h2>Alert Management System</h2>
+                
+                <div class="alert-controls">
+                    <button class="btn-danger" onclick="sendMassAlert()">Send Mass Alert</button>
+                    <button class="btn-primary" onclick="scheduleAlert()">Schedule Alert</button>
+                </div>
+
+                <div class="alert-form">
+                    <h3>Create New Alert</h3>
+                    <form onsubmit="createAlert(event)">
+                        <div class="form-group">
+                            <label>Alert Type</label>
+                            <select id="alertType" class="form-control" required>
+                                <option value="">Select Type</option>
+                                <option value="flood">Flood Warning</option>
+                                <option value="evacuation">Evacuation Notice</option>
+                                <option value="weather">Weather Alert</option>
+                                <option value="emergency">Emergency</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Target Zones</label>
+                            <select id="alertZone" class="form-control" required>
+                                <option value="All Zones">All Zones</option>
+                                <option value="High Risk Zones Only">High Risk Zones Only</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Alert Message</label>
+                            <textarea id="alertMessage" class="form-control" rows="4" placeholder="Enter alert message..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Priority Level</label>
+                            <select id="alertPriority" class="form-control" required>
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                                <option value="Critical">Critical</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Alert</button>
+                    </form>
+                </div>
+
+                <div class="alert-history">
+                    <h3>Alert History</h3>
+                    <div id="adminHistoryList" class="history-list">
+                        <div class="history-item">
+                            <div class="history-header">
+                                <span class="badge severe">Critical</span>
+                                <span class="history-time">10 min ago</span>
+                            </div>
+                            <p>Flood warning issued for T. Nagar and surrounding areas</p>
+                            <small>Sent to 15 zones • 45,000 users notified</small>
+                        </div>
+                        <div class="history-item">
+                            <div class="history-header">
+                                <span class="badge high">High</span>
+                                <span class="history-time">2 hours ago</span>
+                            </div>
+                            <p>Heavy rainfall expected in next 6 hours</p>
+                            <small>Sent to all zones • 120,000 users notified</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reports Section -->
+            <div id="reports" class="section">
+                <h2>Reports & Analytics</h2>
+                
+                <div class="report-filters">
+                    <select class="form-control">
+                        <option>Last 7 Days</option>
+                        <option>Last 30 Days</option>
+                        <option>Last 3 Months</option>
+                        <option>Custom Range</option>
+                    </select>
+                    <button class="btn-primary" onclick="generateReport()">Generate Report</button>
+                    <button class="btn-primary" onclick="downloadReport()">Download PDF</button>
+                </div>
+
+                <div class="report-cards">
+                    <div class="report-card">
+                        <h4>Total Alerts Sent</h4>
+                        <p class="report-number">1,247</p>
+                        <span class="report-change positive">+12% from last week</span>
+                    </div>
+                    <div class="report-card">
+                        <h4>Average Response Time</h4>
+                        <p class="report-number">2.3 min</p>
+                        <span class="report-change positive">-15% improvement</span>
+                    </div>
+                    <div class="report-card">
+                        <h4>System Uptime</h4>
+                        <p class="report-number">99.8%</p>
+                        <span class="report-change positive">Excellent</span>
+                    </div>
+                    <div class="report-card">
+                        <h4>User Engagement</h4>
+                        <p class="report-number">87%</p>
+                        <span class="report-change positive">+5% increase</span>
+                    </div>
+                </div>
+                
+                <div id="reportOutput" class="report-output" style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: none;">
+                    <h3 style="margin-bottom: 15px; color: #0369a1;">Generated Assessment Report</h3>
+                    <div id="reportContent"></div>
+                </div>
+            </div>
+
+            <!-- User Management Section -->
+            <div id="users" class="section">
+                <h2>User Management</h2>
+                
+                <div class="controls">
+                    <input type="text" placeholder="Search users..." class="search-input">
+                    <button class="btn-primary" onclick="addUser()">Add User</button>
+                </div>
+
+                <div class="user-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#U001</td>
+                                <td>Admin User</td>
+                                <td>admin@geoguard.com</td>
+                                <td><span class="badge info">Admin</span></td>
+                                <td><span class="badge success">Active</span></td>
+                                <td>
+                                    <button class="btn-small">Edit</button>
+                                    <button class="btn-small">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#U002</td>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                                <td><span class="badge">User</span></td>
+                                <td><span class="badge success">Active</span></td>
+                                <td>
+                                    <button class="btn-small">Edit</button>
+                                    <button class="btn-small">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Emergency Contacts Section -->
+            <div id="contacts" class="section">
+                <h2>Emergency Contacts Management</h2>
+                
+                <button class="btn-primary" onclick="addContact()">Add New Contact</button>
+
+                <div id="adminContactsList" class="contacts-management">
+                    <div class="contact-edit-card">
+                        <h4>Emergency Ambulance</h4>
+                        <input type="text" class="form-control" value="108">
+                        <input type="text" class="form-control" value="24/7 Emergency Medical Services">
+                        <button class="btn-small" onclick="saveContact(this)">Save</button>
+                        <button class="btn-small" onclick="deleteContact(this)">Delete</button>
+                    </div>
+                    <div class="contact-edit-card">
+                        <h4>Fire & Rescue</h4>
+                        <input type="text" class="form-control" value="101">
+                        <input type="text" class="form-control" value="Fire Emergency & Rescue Operations">
+                        <button class="btn-small" onclick="saveContact(this)">Save</button>
+                        <button class="btn-small" onclick="deleteContact(this)">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Settings Section -->
+            <div id="system" class="section">
+                <h2>System Settings</h2>
+                
+                <div class="settings-grid">
+                    <div class="setting-card">
+                        <h4>Notifications</h4>
+                        <label class="switch">
+                            <input type="checkbox" checked onchange="saveSetting(this, 'Push Notifications')">
+                            <span class="slider"></span>
+                        </label>
+                        <p>Enable push notifications</p>
+                    </div>
+                    <div class="setting-card">
+                        <h4>Auto Refresh</h4>
+                        <label class="switch">
+                            <input type="checkbox" checked onchange="saveSetting(this, 'Auto Refresh')">
+                            <span class="slider"></span>
+                        </label>
+                        <p>Auto refresh data every 5 minutes</p>
+                    </div>
+                    <div class="setting-card">
+                        <h4>Email Alerts</h4>
+                        <label class="switch">
+                            <input type="checkbox" onchange="saveSetting(this, 'Email Alerts')">
+                            <span class="slider"></span>
+                        </label>
+                        <p>Send email notifications</p>
+                    </div>
+                </div>
+
+                <div class="system-info">
+                    <h3>System Information</h3>
+                    <p><strong>Version:</strong> 1.0.0</p>
+                    <p><strong>Last Update:</strong> 2024-03-11</p>
+                    <p><strong>Database:</strong> Connected</p>
+                    <p><strong>API Status:</strong> Online</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>GEOGUARD ADMIN</h4>
+                <p>Administrative Control Panel</p>
+                <p>&copy; 2024 GeoGuard. All rights reserved.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Dashboard</a>
+                <a href="emergency.html">Emergency Contacts</a>
+            </div>
+            <div class="footer-section">
+                <h4>System Status</h4>
+                <p>✅ Database: Online</p>
+                <p>✅ API: Connected</p>
+                <p>✅ Uptime: 99.8%</p>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <p>📧 admin@geoguard.com</p>
+                <p>📞 044-2561-9206</p>
+                <p>Version 1.0.0</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

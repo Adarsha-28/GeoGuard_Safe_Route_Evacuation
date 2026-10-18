@@ -1,0 +1,86 @@
+# ==============================================================================
+# GeoGuard - .gitignore
+# ==============================================================================
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment Configuration & Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.crt
+
+# Python Bytecode & Compilation Caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.pyo
+
+# Testing & Code Quality
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+nosetests.xml
+coverage.xml
+
+# PostgreSQL / PostGIS Local Bundles & Clusters
+geoguard_pgsql/
+geoguard_pgdata/
+postgis-bundle-*/
+postgis-bundle-*.zip
+*.pid
+
+# Databases & Local SQLite Caches
+*.db
+*.sqlite
+*.sqlite3
+data/shelters.db
+data/geoguard.db
+
+# Logs & Runtime
+*.log
+logs/
+server.log
+
+# IDE & Editor Settings
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Build, Packaging & Temporary Artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+cache/
+output/
+outputs/
+.ipynb_checkpoints/
+scratch/
+tmp/

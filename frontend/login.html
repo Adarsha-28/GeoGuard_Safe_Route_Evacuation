@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGuard - Admin Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <div class="login-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #0B5E8E;"><path d="M20 13c0 5-3.5 7.5-7.66 9.7a1 1 0 0 1-.68 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 .76-.97l8-2a1 1 0 0 1 .48 0l8 2A1 1 0 0 1 20 6z"/></svg>
+                    <span>GEOGUARD</span>
+                </div>
+                <h2>Admin Portal Access</h2>
+                <p>Authorized personnel only. Please sign in below.</p>
+            </div>
+            
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember">
+                        <span>Remember me</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; height: 42px;">Login</button>
+                
+                <div class="login-footer">
+                    <a href="index.html" class="back-link">← Back to Operations Dashboard</a>
+                </div>
+            </form>
+            
+            <div class="demo-credentials">
+                <p><strong>Demo Credentials:</strong></p>
+                <p>Username: <code>admin</code></p>
+                <p>Password: <code>admin123</code></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="login.js"></script>
+</body>
+</html>

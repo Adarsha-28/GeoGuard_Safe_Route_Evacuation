@@ -1,0 +1,146 @@
+{
+  "model_version": "v3.0.0",
+  "algorithm": "Gradient Boosting",
+  "features": [
+    "rainfall_current_mm",
+    "rainfall_3d_accum_mm",
+    "rainfall_7d_accum_mm",
+    "elevation_m",
+    "distance_to_water_m",
+    "latitude",
+    "longitude",
+    "month"
+  ],
+  "feature_ranking": [
+    {
+      "feature": "rainfall_3d_accum_mm",
+      "importance": 0.44
+    },
+    {
+      "feature": "rainfall_7d_accum_mm",
+      "importance": 0.3024
+    },
+    {
+      "feature": "month",
+      "importance": 0.147
+    },
+    {
+      "feature": "rainfall_current_mm",
+      "importance": 0.0808
+    },
+    {
+      "feature": "elevation_m",
+      "importance": 0.0107
+    },
+    {
+      "feature": "distance_to_water_m",
+      "importance": 0.0107
+    },
+    {
+      "feature": "longitude",
+      "importance": 0.0082
+    },
+    {
+      "feature": "latitude",
+      "importance": 0.0002
+    }
+  ],
+  "training_dataset": "data/processed/chennai_flood_training_dataset.csv",
+  "dataset_records": 6018,
+  "train_records": 4284,
+  "test_records": 1020,
+  "trained_at": "2026-10-02T11:22:56.367396Z",
+  "random_seed": 42,
+  "test_metrics": {
+    "model_name": "Gradient Boosting Classifier",
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1": 0.8889,
+    "roc_auc": 0.9827,
+    "pr_auc": 0.8,
+    "confusion_matrix": [
+      [
+        865,
+        31
+      ],
+      [
+        0,
+        124
+      ]
+    ]
+  },
+  "benchmark_comparison": [
+    {
+      "model_name": "V2 Deterministic Multi-Criteria (Baseline)",
+      "precision": 0.6098,
+      "recall": 0.6048,
+      "f1": 0.6073,
+      "roc_auc": 0.8161,
+      "pr_auc": 0.6503,
+      "confusion_matrix": [
+        [
+          848,
+          48
+        ],
+        [
+          49,
+          75
+        ]
+      ]
+    },
+    {
+      "model_name": "Logistic Regression (Class-Weighted)",
+      "precision": 0.3769,
+      "recall": 1.0,
+      "f1": 0.5475,
+      "roc_auc": 0.9866,
+      "pr_auc": 0.9075,
+      "confusion_matrix": [
+        [
+          691,
+          205
+        ],
+        [
+          0,
+          124
+        ]
+      ]
+    },
+    {
+      "model_name": "Random Forest Classifier (Balanced)",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "confusion_matrix": [
+        [
+          834,
+          62
+        ],
+        [
+          0,
+          124
+        ]
+      ]
+    },
+    {
+      "model_name": "Gradient Boosting Classifier",
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889,
+      "roc_auc": 0.9827,
+      "pr_auc": 0.8,
+      "confusion_matrix": [
+        [
+          865,
+          31
+        ],
+        [
+          0,
+          124
+        ]
+      ]
+    }
+  ]
+}

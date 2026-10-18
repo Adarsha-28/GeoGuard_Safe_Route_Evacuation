@@ -1,0 +1,754 @@
+{
+  "type": "FeatureCollection",
+  "name": "chennai_places_risk",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "id": 1,
+        "place_name": "T. Nagar",
+        "latitude": 13.0418,
+        "longitude": 80.2341,
+        "elevation_m": 6.0,
+        "distance_to_water": 1500.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.3452,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2341,
+          13.0418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "id": 2,
+        "place_name": "Anna Nagar",
+        "latitude": 13.085,
+        "longitude": 80.2101,
+        "elevation_m": 9.0,
+        "distance_to_water": 3500.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.1932,
+        "flood_risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2101,
+          13.085
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "properties": {
+        "id": 3,
+        "place_name": "Adyar",
+        "latitude": 13.0067,
+        "longitude": 80.257,
+        "elevation_m": 2.0,
+        "distance_to_water": 200.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.4782,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.257,
+          13.0067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "properties": {
+        "id": 4,
+        "place_name": "Velachery",
+        "latitude": 12.975,
+        "longitude": 80.221,
+        "elevation_m": 1.0,
+        "distance_to_water": 400.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.4847,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.221,
+          12.975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "properties": {
+        "id": 5,
+        "place_name": "Tambaram",
+        "latitude": 12.9229,
+        "longitude": 80.1275,
+        "elevation_m": 16.0,
+        "distance_to_water": 5000.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.0,
+        "flood_risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.1275,
+          12.9229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "properties": {
+        "id": 6,
+        "place_name": "Porur",
+        "latitude": 13.0358,
+        "longitude": 80.1597,
+        "elevation_m": 7.0,
+        "distance_to_water": 1200.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.3439,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.1597,
+          13.0358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "properties": {
+        "id": 7,
+        "place_name": "Guindy",
+        "latitude": 13.0067,
+        "longitude": 80.2206,
+        "elevation_m": 8.0,
+        "distance_to_water": 1800.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.2966,
+        "flood_risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2206,
+          13.0067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "properties": {
+        "id": 8,
+        "place_name": "Mylapore",
+        "latitude": 13.0339,
+        "longitude": 80.2619,
+        "elevation_m": 3.0,
+        "distance_to_water": 900.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.4259,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2619,
+          13.0339
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "properties": {
+        "id": 9,
+        "place_name": "Nungambakkam",
+        "latitude": 13.0569,
+        "longitude": 80.2425,
+        "elevation_m": 5.5,
+        "distance_to_water": 1400.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.3587,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2425,
+          13.0569
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "properties": {
+        "id": 10,
+        "place_name": "Egmore",
+        "latitude": 13.0732,
+        "longitude": 80.2609,
+        "elevation_m": 4.5,
+        "distance_to_water": 800.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.406,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2609,
+          13.0732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "properties": {
+        "id": 11,
+        "place_name": "Perungudi",
+        "latitude": 12.9611,
+        "longitude": 80.2417,
+        "elevation_m": 2.2,
+        "distance_to_water": 600.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.4545,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2417,
+          12.9611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "properties": {
+        "id": 12,
+        "place_name": "Sholinganallur",
+        "latitude": 12.901,
+        "longitude": 80.2279,
+        "elevation_m": 1.5,
+        "distance_to_water": 500.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.4713,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2279,
+          12.901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "properties": {
+        "id": 13,
+        "place_name": "OMR",
+        "latitude": 12.95,
+        "longitude": 80.22,
+        "elevation_m": 2.5,
+        "distance_to_water": 800.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.4393,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.22,
+          12.95
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "properties": {
+        "id": 14,
+        "place_name": "ECR",
+        "latitude": 12.85,
+        "longitude": 80.25,
+        "elevation_m": 1.2,
+        "distance_to_water": 300.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.4865,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.25,
+          12.85
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "properties": {
+        "id": 15,
+        "place_name": "Pallavaram",
+        "latitude": 12.9675,
+        "longitude": 80.1491,
+        "elevation_m": 12.0,
+        "distance_to_water": 4000.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.1177,
+        "flood_risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.1491,
+          12.9675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "properties": {
+        "id": 16,
+        "place_name": "Chromepet",
+        "latitude": 12.9516,
+        "longitude": 80.1462,
+        "elevation_m": 13.0,
+        "distance_to_water": 4500.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.0755,
+        "flood_risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.1462,
+          12.9516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "properties": {
+        "id": 17,
+        "place_name": "Saidapet",
+        "latitude": 13.021,
+        "longitude": 80.2231,
+        "elevation_m": 3.5,
+        "distance_to_water": 150.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.4558,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2231,
+          13.021
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "properties": {
+        "id": 18,
+        "place_name": "Kodambakkam",
+        "latitude": 13.0515,
+        "longitude": 80.2254,
+        "elevation_m": 6.2,
+        "distance_to_water": 1600.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.3368,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2254,
+          13.0515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "properties": {
+        "id": 19,
+        "place_name": "Ashok Nagar",
+        "latitude": 13.0358,
+        "longitude": 80.2093,
+        "elevation_m": 8.0,
+        "distance_to_water": 2800.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.2456,
+        "flood_risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2093,
+          13.0358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "properties": {
+        "id": 20,
+        "place_name": "KK Nagar",
+        "latitude": 13.0381,
+        "longitude": 80.202,
+        "elevation_m": 8.5,
+        "distance_to_water": 3000.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.227,
+        "flood_risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.202,
+          13.0381
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "properties": {
+        "id": 21,
+        "place_name": "Vadapalani",
+        "latitude": 13.0504,
+        "longitude": 80.2121,
+        "elevation_m": 7.2,
+        "distance_to_water": 2000.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.2997,
+        "flood_risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2121,
+          13.0504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "properties": {
+        "id": 22,
+        "place_name": "Virugambakkam",
+        "latitude": 13.0562,
+        "longitude": 80.2029,
+        "elevation_m": 9.5,
+        "distance_to_water": 3200.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.2002,
+        "flood_risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2029,
+          13.0562
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "properties": {
+        "id": 23,
+        "place_name": "Koyambedu",
+        "latitude": 13.0732,
+        "longitude": 80.1948,
+        "elevation_m": 6.8,
+        "distance_to_water": 2500.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.2809,
+        "flood_risk": "Low"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.1948,
+          13.0732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "properties": {
+        "id": 24,
+        "place_name": "Aminjikarai",
+        "latitude": 13.0732,
+        "longitude": 80.2186,
+        "elevation_m": 5.2,
+        "distance_to_water": 400.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.4147,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2186,
+          13.0732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "properties": {
+        "id": 25,
+        "place_name": "Kilpauk",
+        "latitude": 13.0791,
+        "longitude": 80.2424,
+        "elevation_m": 7.0,
+        "distance_to_water": 1800.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.3133,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2424,
+          13.0791
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "properties": {
+        "id": 26,
+        "place_name": "Chetpet",
+        "latitude": 13.0732,
+        "longitude": 80.2424,
+        "elevation_m": 5.0,
+        "distance_to_water": 300.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.4231,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2424,
+          13.0732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "properties": {
+        "id": 27,
+        "place_name": "Teynampet",
+        "latitude": 13.0389,
+        "longitude": 80.2497,
+        "elevation_m": 4.0,
+        "distance_to_water": 1000.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.4041,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2497,
+          13.0389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "properties": {
+        "id": 28,
+        "place_name": "Alwarpet",
+        "latitude": 13.0339,
+        "longitude": 80.2497,
+        "elevation_m": 3.8,
+        "distance_to_water": 900.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.4125,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2497,
+          13.0339
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "properties": {
+        "id": 29,
+        "place_name": "Mandaveli",
+        "latitude": 13.0281,
+        "longitude": 80.2644,
+        "elevation_m": 3.2,
+        "distance_to_water": 700.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.4327,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2644,
+          13.0281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "properties": {
+        "id": 30,
+        "place_name": "Besant Nagar",
+        "latitude": 13.0006,
+        "longitude": 80.2661,
+        "elevation_m": 2.5,
+        "distance_to_water": 150.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.4724,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2661,
+          13.0006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "properties": {
+        "id": 31,
+        "place_name": "Thiruvanmiyur",
+        "latitude": 12.9833,
+        "longitude": 80.2611,
+        "elevation_m": 2.8,
+        "distance_to_water": 400.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.4547,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2611,
+          12.9833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "properties": {
+        "id": 32,
+        "place_name": "Taramani",
+        "latitude": 12.9915,
+        "longitude": 80.2447,
+        "elevation_m": 2.2,
+        "distance_to_water": 800.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.4443,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2447,
+          12.9915
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "properties": {
+        "id": 33,
+        "place_name": "Kotturpuram",
+        "latitude": 13.0167,
+        "longitude": 80.2497,
+        "elevation_m": 2.5,
+        "distance_to_water": 100.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.475,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2497,
+          13.0167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "properties": {
+        "id": 34,
+        "place_name": "Santhome",
+        "latitude": 13.0339,
+        "longitude": 80.2775,
+        "elevation_m": 2.2,
+        "distance_to_water": 100.0,
+        "rainfall_mm": 0.0,
+        "flood_risk_score": 0.48,
+        "flood_risk": "Moderate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.2775,
+          13.0339
+        ]
+      }
+    }
+  ]
+}
